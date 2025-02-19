@@ -4,7 +4,7 @@ import streamlit as st
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
-df = pd.read_csv("../Data/ClusteredData.csv", index_col=0)
+df = pd.read_csv("Data/ClusteredData.csv", index_col=0)
 orig_cols = ['Age', 'Salary', 'Total Spent', 'Payment Method', 'Days Since Joined',
         'Gender', 'First Name', 'Last Name', 'Email', 'IBAN']
 
