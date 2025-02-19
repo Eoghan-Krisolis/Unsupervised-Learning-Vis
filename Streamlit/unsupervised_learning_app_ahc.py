@@ -248,15 +248,17 @@ def main():
 
     st.title("Unsupervised Learning")
     st.subheader("Demonstration with Clustering")
-    st.markdown("""- Use the controls in the sidebar to choose the number of clusters to segment the customers into. 
-                - Visualise the results and discuss what you think is the optimal number of clusters.
-                - What does each cluster represent?""")
+    st.markdown(
+    """- Use the controls in the sidebar to choose the number of clusters to segment the customers into.
+    - Visualise the results and discuss what you think is the optimal number of clusters.
+    - What does each cluster represent?"""
+    )
     
     if "k" not in st.session_state:
         st.session_state["k"] = 1
 
     st.session_state["k"] = st.sidebar.slider("Number of Clusters",1,9,1,1)
-    st.session_state["vis"] = st.sidebar.multiselect("Visualisations to Display",("Table", "Scatter Matrix", "Barplots", "Histograms"))
+    st.session_state["vis"] = st.sidebar.multiselect("Visualisations to Display",("Table", "Scatter Matrix", "Barplots", "Histograms"), default=["Table"])
 
     st.header("Data Visualisation")
     
