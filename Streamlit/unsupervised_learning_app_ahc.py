@@ -249,8 +249,9 @@ def main():
     st.title("Unsupervised Learning")
     st.subheader("Demonstration with Clustering")
     st.markdown(
-    """- Use the controls in the sidebar to choose the number of clusters to segment the customers into.
-    - Visualise the results and discuss what you think is the optimal number of clusters.
+    """
+    - Use the controls in the sidebar to choose the number of clusters to segment the customers into.
+    - Visualise the results and discuss what you think is the optimal number of clusters. You can choose the visualisations displayed in the sidebar.
     - What does each cluster represent?"""
     )
     
@@ -260,7 +261,7 @@ def main():
     st.session_state["k"] = st.sidebar.slider("Number of Clusters",1,9,1,1)
     st.session_state["vis"] = st.sidebar.multiselect("Visualisations to Display",("Table", "Scatter Matrix", "Barplots", "Histograms"), default=["Table"])
 
-    st.header("Data Visualisation")
+    st.header("Data Visualisation",help="Choose which visualisations are displayed in the sidebar. Hover over the visualisations to view more details.")
     
     plot_data(df, st.session_state["vis"], st.session_state["k"])
     
