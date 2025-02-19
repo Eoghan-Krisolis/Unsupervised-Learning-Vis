@@ -247,7 +247,7 @@ def main():
         })
 
     st.title("Unsupervised Learning")
-    st.subheader("Demonstration with Clustering")
+    st.subheader("Demonstration with Clustering - Customer Segmentation", help = "Customer segmentation using clustering is a data-driven approach that groups customers based on similarities in their behavior, demographics, or purchase patterns. By applying unsupervised machine learning techniques, businesses can automatically identify distinct segments within their customer base—each with its unique needs and preferences. This segmentation helps companies tailor marketing strategies, improve product recommendations, and allocate resources more effectively, ultimately leading to enhanced customer satisfaction and increased business growth.")
     st.markdown(
     """
     - Use the controls in the sidebar to choose the number of clusters to segment the customers into.
