@@ -259,7 +259,7 @@ def main():
         st.session_state["k"] = 1
 
     st.session_state["k"] = st.sidebar.slider("Number of Clusters",1,9,1,1)
-    st.session_state["vis"] = st.sidebar.multiselect("Visualisations to Display",("Table", "Scatter Matrix", "Barplots", "Histograms"), default=["Table"])
+    st.session_state["vis"] = st.sidebar.multiselect("Visualisations to Display",("Table", "Scatter Matrix", "Barplots", "Histograms"), default=["Table","Scatter Matrix"])
 
     st.header("Data Visualisation",help="Choose which visualisations are displayed in the sidebar. Hover over the visualisations to view more details.")
     
